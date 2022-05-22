@@ -1,0 +1,43 @@
+{% extends 'downloader/YT_Downloader(Home).html' %}
+{% load static %}
+{% block body_block %}
+<div class="jumbotron">
+  <br>
+  <h1>Video Downloader</h1>
+  <br>
+  <div class="card-body">
+
+    <form class="form-download" method="POST">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-md-12">
+            <label class="text-weight"><b>Link of the video :</b></label>
+            <input type="txt" name="link" id="link" class="form-control link" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group mt-4 download-video">
+            <button class="btn btn-success btn-block click-btn-down" type="submit">Download</button>
+          
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <br><br>
+  <h4 class="lef">Instructions :</h4>
+  <ol class="lef">
+  <li>Go to <a href="https://www.youtube.com/">Youtube</a>.</li>
+  <li>Copy the link of the video to be downloaded.</li>
+  <li>Paste the copied link in above box and click the "Download" button to download</li>
+  </ol>
+
+</div>
+{% endblock %}

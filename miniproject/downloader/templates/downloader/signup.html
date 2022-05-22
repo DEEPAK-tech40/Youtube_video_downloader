@@ -1,0 +1,15 @@
+{% extends 'downloader/YT_Downloader(home).html' %}
+{% load bootstrap3 %}
+{% block body_block %}
+<div class="container">
+  <h1>Sign Up</h1>
+  <form method="POST">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+      <p></p>
+      <p></p>
+      <input type="submit" value="Sign Up" class="btn btn-success btn-block">
+  </form>
+</div>
+
+{% endblock %}
